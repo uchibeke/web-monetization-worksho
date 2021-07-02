@@ -44,7 +44,7 @@ export default function StageContainer({ stage, allStages }: Props) {
         {loginStatus === 'loggedIn' ? (
           <div className={cn(styles.stream, styleUtils.appear, styleUtils['appear-first'])}>
             <iframe
-              allow="autoplay; picture-in-picture"
+              allow="autoplay; picture-in-picture; camera; microphone"
               allowFullScreen
               frameBorder="0"
               src={`${updatedStage.stream}?autoplay=1&mute=1`}

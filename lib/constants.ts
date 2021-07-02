@@ -45,12 +45,12 @@ export const NAVIGATION = [
     route: '/stage/showcase1'
   },
   {
-    name: 'Showcase 2',
-    route: '/stage/showcase2'
-  },
-  {
     name: 'Architecture session 1',
     route: '/stage/architecture1'
+  },
+  {
+    name: 'Showcase 2',
+    route: '/stage/showcase2'
   },
   {
     name: 'Architecture session 2',
