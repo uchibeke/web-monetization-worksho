@@ -15,7 +15,7 @@
  */
 
 import cn from 'classnames';
-import VercelLogo from '@components/icons/icon-platform';
+import CoilLogo from '@components/icons/coil-logo';
 import styles from './footer.module.css';
 import { COPYRIGHT_HOLDER, SITE_NAME, CODE_OF_CONDUCT, LEGAL_URL, REPO } from '@lib/constants';
 
@@ -27,8 +27,8 @@ export function HostedByVercel() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className={styles['secondary-text']}>Created by </div>
-      <VercelLogo color="white" />
+      <div className={styles['secondary-text']}>Hosted by </div>
+      <CoilLogo color="white" />
     </a>
   );
 }
@@ -53,7 +53,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Source Code
+              Technical topics
             </a>
           </p>
           <div className={styles['footer-separator']} />

@@ -23,8 +23,8 @@ export default function LearnMore() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}>
       Learn more on{' '}
-      <a href={REPO} className={styles['contact-email']} target="_blank" rel="noopener noreferrer">
-        GitHub
+      <a href="https://dev.to/coil/announcing-the-web-monetization-workshop-wmw-2oid" className={styles['contact-email']} target="_blank" rel="noopener noreferrer">
+        dev.to/coil
       </a>
       .
     </div>
