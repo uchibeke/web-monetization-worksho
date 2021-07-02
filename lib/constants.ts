@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-export const SITE_URL = 'https://demo.vercel.events';
+export const SITE_URL = 'https://webmonetization.org';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'interledger';
 export const BRAND_NAME = 'Web Monetization';
 export const SITE_NAME_MULTILINE = ['Web Monetization', 'Workshop'];
 export const SITE_NAME = 'Web Monetization Workshop';
 export const META_DESCRIPTION =
-  'The workshop aims to bring community members together to get and discuss community feedback and leave with changes to the Web Monetization specification';
+  'The Web Monetization workshop aims to bring community members together to get and discuss community feedback and leave with changes to the Web Monetization specification';
 export const SITE_DESCRIPTION =
-  'The Web Monetization Workshop event app.';
+  'The Web Monetization Workshop.';
 export const DATE = 'July 28 - 29, 2021';
 export const SHORT_DATE = 'July 28 - 29, 2021 | 7am PST and 3pm PST';
 export const FULL_DATE = 'July 28 - 29, 2021 | 7am Pacific Time (GMT-7) and 3pm Pacific Time (GMT-7)';
