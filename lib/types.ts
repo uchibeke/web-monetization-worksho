@@ -90,6 +90,12 @@ export type ConfUser = {
   createdAt: number;
 };
 
+export type NotionUser = {
+  id?: string;
+  email: string;
+  name?: string;
+};
+
 export type GitHubOAuthData =
   | {
       type: 'token';
