@@ -19,7 +19,7 @@ import { useCallback, useState } from 'react';
 import styleUtils from './utils.module.css';
 import styles from './conf-entry.module.css';
 import LoadingDots from './loading-dots';
-import { register } from '@lib/user-api';
+import { registerToNotion } from '@lib/user-api';
 import { SITE_DESCRIPTION } from '@lib/constants';
 import useEmailQueryParam from '@lib/hooks/use-email-query-param';
 
@@ -48,7 +48,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
         e.preventDefault();
         setFormState('loading');
 
-        const res = await register(emailInput);
+        const res = await registerToNotion(emailInput)
 
         if (!res.ok) {
           const json = await res.json();
