@@ -44,13 +44,13 @@ export default function StageContainer({ stage, allStages }: Props) {
         {loginStatus === 'loggedIn' ? (
           <div className={cn(styles.stream, styleUtils.appear, styleUtils['appear-first'])}>
             <iframe
-              allow="autoplay; picture-in-picture; camera; microphone"
+              allow="autoplay; picture-in-picture; camera; microphone; monetization; accelerometer; gyroscope;"
               allowFullScreen
               frameBorder="0"
-              src={`${updatedStage.stream}?autoplay=1&mute=1`}
+              src={`${updatedStage.stream}`}
               title={updatedStage.name}
               width="100%"
-            />
+            ></iframe>
             <div className={cn(styles.bottom, styleUtils.appear, styleUtils['appear-second'])}>
               <div className={styles.messageContainer}>
                 <h2 className={styles.stageName}>{stage.name}</h2>
@@ -62,7 +62,10 @@ export default function StageContainer({ stage, allStages }: Props) {
                 className={styles.button}
               >
                 <span>Join the chat</span>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chat_white.svg/1200px-Chat_white.svg.png" style={{height:"inherit",marginLeft:"5px"}}></img>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chat_white.svg/1200px-Chat_white.svg.png"
+                  style={{ height: 'inherit', marginLeft: '5px' }}
+                ></img>
               </a>
             </div>
           </div>
