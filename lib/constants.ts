@@ -24,9 +24,9 @@ export const META_DESCRIPTION =
   'The Web Monetization workshop aims to bring community members together to get and discuss community feedback and leave with changes to the Web Monetization specification';
 export const SITE_DESCRIPTION = 'The Web Monetization Workshop.';
 export const DATE = 'July 28 - 29, 2021';
-export const SHORT_DATE = 'July 28 - 29, 2021 | 7am PST and 3pm PST';
+export const SHORT_DATE = 'July 28 - 29, 2021 | 8am PST and 3pm PST';
 export const FULL_DATE =
-  'July 28 - 29, 2021 | 7am Pacific Time (GMT-7) and 3pm Pacific Time (GMT-7)';
+  'July 28 - 29, 2021 | 8am Pacific Time (GMT-7) and 3pm Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 
