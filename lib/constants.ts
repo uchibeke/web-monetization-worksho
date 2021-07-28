@@ -41,7 +41,7 @@ export const REPO = 'https://github.com/WICG/webmonetization';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Showcase 1',
+    name: 'Showcase',
     route: '/stage/showcase1'
   },
   {
