@@ -49,7 +49,7 @@ export const NAVIGATION = [
     route: '/stage/architecture1'
   },
   {
-    name: 'Showcase 2',
+    name: 'Showcase Replay',
     route: '/stage/showcase2'
   },
   {
