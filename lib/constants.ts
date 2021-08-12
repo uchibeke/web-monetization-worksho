@@ -40,22 +40,22 @@ export const CODE_OF_CONDUCT =
 export const REPO = 'https://github.com/WICG/webmonetization';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
-  {
-    name: 'Showcase',
-    route: '/stage/showcase1'
-  },
-  {
-    name: 'Architecture session 1',
-    route: '/stage/architecture1'
-  },
+  // {
+  //   name: 'Showcase',
+  //   route: '/stage/showcase1'
+  // },
+  // {
+  //   name: 'Architecture session 1',
+  //   route: '/stage/architecture1'
+  // },
   {
     name: 'Showcase Replay',
     route: '/stage/showcase2'
   },
-  {
-    name: 'Architecture session 2',
-    route: '/stage/architecture2'
-  },
+  // {
+  //   name: 'Architecture session 2',
+  //   route: '/stage/architecture2'
+  // },
   {
     name: 'Schedule',
     route: '/schedule'

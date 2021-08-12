@@ -62,10 +62,10 @@ export default function Conf({
                   className={cn(styles.submit, styles['default'])}
                   onClick={e => {
                     e.preventDefault();
-                    router.push('/schedule');
+                    router.push('/stage/showcase2');
                   }}
                 >
-                  View Schedule
+                  Watch replay
                 </button>
               </form>
             </div>
