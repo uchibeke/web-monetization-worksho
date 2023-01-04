@@ -22,9 +22,9 @@ import { REPO } from '@lib/constants';
 export default function LearnMore() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}>
-      Learn more on{' '}
-      <a href={REPO} className={styles['contact-email']} target="_blank" rel="noopener noreferrer">
-        GitHub
+      Learn more {' '}
+      <a href="https://webmonetization.org/specification.html" className={styles['contact-email']} target="_blank" rel="noopener noreferrer">
+        webmonetization.org/specification
       </a>
       .
     </div>

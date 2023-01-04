@@ -17,6 +17,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { COOKIE } from '@lib/constants';
 import redis from '@lib/redis';
+import notion, { getRecord } from '@lib/notion';
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   const id = req.cookies[COOKIE];
@@ -33,6 +34,19 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     const ticketNumberString = await redis.hget(`id:${id}`, 'ticketNumber');
 
     if (!ticketNumberString) {
+      return res.status(401).json({
+        error: {
+          code: 'not_registered',
+          message: 'This user is not registered'
+        }
+      });
+    }
+  }
+
+  if (notion) {
+    const email = await getRecord(id);
+
+    if (!email) {
       return res.status(401).json({
         error: {
           code: 'not_registered',

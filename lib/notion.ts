@@ -14,17 +14,27 @@
  * limitations under the License.
  */
 
-/* Make clicks pass-through */
-#nprogress {
-  pointer-events: none;
-}
+const { Client } = require('@notionhq/client');
 
-#nprogress .bar {
-  background: #6adaab;
-  position: fixed;
-  z-index: 1031;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-}
+const notionClient = new Client({ auth: process.env.NOTION_API_KEY });
+
+const notion = process.env.NOTION_API_KEY && process.env.NOTION_DATABASE_ID;
+
+export const getRecord = async (email: string) => {
+  const response = await notionClient.databases.query({
+    database_id: process.env.NOTION_DATABASE_ID,
+    filter: {
+      or: [
+        {
+          property: 'Email',
+          text: {
+            equals: email
+          }
+        }
+      ]
+    }
+  });
+  return response.results && response.results[0];
+};
+
+export default notion;

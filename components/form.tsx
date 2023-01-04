@@ -23,7 +23,7 @@ import LoadingDots from './loading-dots';
 import styleUtils from './utils.module.css';
 import styles from './form.module.css';
 import useEmailQueryParam from '@lib/hooks/use-email-query-param';
-import { register } from '@lib/user-api';
+import { registerToNotion } from '@lib/user-api';
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -74,7 +74,7 @@ export default function Form({ sharePage }: Props) {
       onSubmit={e => {
         if (formState === 'default') {
           setFormState('loading');
-          register(email)
+          registerToNotion(email)
             .then(async res => {
               if (!res.ok) {
                 throw new FormError(res);
@@ -152,7 +152,7 @@ export default function Form({ sharePage }: Props) {
           className={cn(styles.submit, styles.register, styles[formState])}
           disabled={formState === 'loading'}
         >
-          {formState === 'loading' ? <LoadingDots size={4} /> : <>Register</>}
+          {formState === 'loading' ? <LoadingDots size={4} /> : <>Watch replay</>}
         </button>
       </div>
     </form>

@@ -1,7 +1,7 @@
 {
-  "name": "Virtual Event Starter Kit",
-  "short_name": "Virtual Event Starter Kit",
-  "description": "Virtual Event Starter Kit -> https://demo.vercel.events",
+  "name": "Web Monetization Workshop",
+  "short_name": "Web Monetization Workshop",
+  "description": "Web Monetization Workshop -> https://webmonetization.org/",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",

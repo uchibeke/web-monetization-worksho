@@ -16,12 +16,15 @@
 
 import { useState } from 'react';
 import { PageState, ConfDataContext, UserData } from '@lib/hooks/use-conf-data';
-import Ticket from './ticket';
 import Layout from './layout';
 import ConfContainer from './conf-container';
 import Hero from './hero';
 import Form from './form';
 import LearnMore from './learn-more';
+import useLoginStatus from '@lib/hooks/use-login-status';
+import cn from 'classnames';
+import styles from './form.module.css';
+import { useRouter } from 'next/router';
 
 type Props = {
   defaultUserData: UserData;
@@ -36,6 +39,8 @@ export default function Conf({
 }: Props) {
   const [userData, setUserData] = useState<UserData>(defaultUserData);
   const [pageState, setPageState] = useState<PageState>(defaultPageState);
+  const { loginStatus, mutate } = useLoginStatus();
+  const router = useRouter();
 
   return (
     <ConfDataContext.Provider
@@ -47,20 +52,27 @@ export default function Conf({
     >
       <Layout>
         <ConfContainer>
-          {pageState === 'registration' && !sharePage ? (
-            <>
-              <Hero />
-              <Form />
-              <LearnMore />
-            </>
+          <Hero />
+          {loginStatus === 'loggedIn' ? (
+            <div>
+              <form style={{ textAlign: 'center' }}>
+                You're in!
+                <button
+                  type="submit"
+                  className={cn(styles.submit, styles['default'])}
+                  onClick={e => {
+                    e.preventDefault();
+                    router.push('/stage/showcase2');
+                  }}
+                >
+                  Watch replay
+                </button>
+              </form>
+            </div>
           ) : (
-            <Ticket
-              username={userData.username}
-              name={userData.name}
-              ticketNumber={userData.ticketNumber}
-              sharePage={sharePage}
-            />
+            <Form />
           )}
+          <LearnMore />
         </ConfContainer>
       </Layout>
     </ConfDataContext.Provider>

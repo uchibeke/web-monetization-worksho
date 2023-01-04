@@ -36,6 +36,17 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
   const router = useRouter();
   const activeRoute = router.asPath;
 
+  const navigate = (route: string) => {
+    if (activeRoute?.includes('architecture')) {
+      var confirmed = confirm("You're about to leave the live session");
+      if (confirmed === true) {
+        router.push(route);
+      }
+    } else {
+      router.push(route);
+    }
+  };
+
   return (
     <>
       <ViewSource />
@@ -53,15 +64,15 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
             </div>
             <div className={styles.tabs}>
               {NAVIGATION.map(({ name, route }) => (
-                <Link key={name} href={route}>
-                  <a
-                    className={cn(styles.tab, {
-                      [styles['tab-active']]: activeRoute.startsWith(route)
-                    })}
-                  >
-                    {name}
-                  </a>
-                </Link>
+                <a
+                  key={name}
+                  className={cn(styles.tab, {
+                    [styles['tab-active']]: activeRoute.startsWith(route)
+                  })}
+                  onClick={() => navigate(route)}
+                >
+                  {name}
+                </a>
               ))}
             </div>
             <div className={cn(styles['header-right'])}>

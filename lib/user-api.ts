@@ -24,6 +24,16 @@ export async function register(email: string) {
   });
 }
 
+export async function registerToNotion(email: string) {
+  return await fetch('/api/register-notion', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email })
+  });
+}
+
 export async function saveGithubToken({ id, token }: { id?: string; token: string }) {
   return await fetch('/api/save-github-token', {
     method: 'POST',

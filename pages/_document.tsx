@@ -21,6 +21,7 @@ export default class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+        <meta name="monetization" content="$ilp.uphold.com/kN2KHpqhNFiM"></meta>
         <body className="loading">
           <Main />
           <NextScript />

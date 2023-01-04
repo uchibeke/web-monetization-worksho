@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-export const SITE_URL = 'https://demo.vercel.events';
+export const SITE_URL = 'https://webmonetization.org';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
-export const TWITTER_USER_NAME = 'vercel';
-export const BRAND_NAME = 'ACME';
-export const SITE_NAME_MULTILINE = ['ACME', 'Conf'];
-export const SITE_NAME = 'ACME Conf';
+export const TWITTER_USER_NAME = 'interledger';
+export const BRAND_NAME = 'Web Monetization';
+export const SITE_NAME_MULTILINE = ['Web Monetization', 'Workshop'];
+export const SITE_NAME = 'Web Monetization Workshop';
 export const META_DESCRIPTION =
-  'This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
-export const SITE_DESCRIPTION =
-  'An interactive online experience by the community, free for everyone.';
-export const DATE = 'October 27, 2020';
-export const SHORT_DATE = 'Oct 27 - 9:00am PST';
-export const FULL_DATE = 'Oct 27th 9am Pacific Time (GMT-7)';
+  'The Web Monetization workshop aims to bring community members together to get and discuss community feedback and leave with changes to the Web Monetization specification';
+export const SITE_DESCRIPTION = 'The Web Monetization Workshop.';
+export const DATE = 'July 28 - 29, 2021';
+export const SHORT_DATE = 'July 28 - 29, 2021 | 8am PST and 3pm PST';
+export const FULL_DATE =
+  'July 28 - 29, 2021 | 8am Pacific Time (GMT-7) and 3pm Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 
@@ -37,25 +37,25 @@ export const COPYRIGHT_HOLDER = process.env.NEXT_PUBLIC_COPYRIGHT_HOLDER;
 
 export const CODE_OF_CONDUCT =
   'https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78';
-export const REPO = 'https://github.com/vercel/virtual-event-starter-kit';
+export const REPO = 'https://github.com/WICG/webmonetization';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
+  // {
+  //   name: 'Showcase',
+  //   route: '/stage/showcase1'
+  // },
+  // {
+  //   name: 'Architecture session 1',
+  //   route: '/stage/architecture1'
+  // },
   {
-    name: 'Stage A',
-    route: '/stage/a'
+    name: 'Showcase Replay',
+    route: '/stage/showcase2'
   },
-  {
-    name: 'Stage C',
-    route: '/stage/c'
-  },
-  {
-    name: 'Stage M',
-    route: '/stage/m'
-  },
-  {
-    name: 'Stage E',
-    route: '/stage/e'
-  },
+  // {
+  //   name: 'Architecture session 2',
+  //   route: '/stage/architecture2'
+  // },
   {
     name: 'Schedule',
     route: '/schedule'
@@ -63,15 +63,15 @@ export const NAVIGATION = [
   {
     name: 'Speakers',
     route: '/speakers'
-  },
-  {
-    name: 'Expo',
-    route: '/expo'
-  },
-  {
-    name: 'Jobs',
-    route: '/jobs'
   }
+  // {
+  //   name: 'Expo',
+  //   route: '/expo'
+  // },
+  // {
+  //   name: 'Jobs',
+  //   route: '/jobs'
+  // }
 ];
 
 export type TicketGenerationState = 'default' | 'loading';

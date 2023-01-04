@@ -1,10 +1,10 @@
 {
-  "name": "Virtual Event Starter Kit",
+  "name": "Web Monetization Workshop",
   "description": "Fully customizable starter kit for your virtual event.",
-  "previewImage": "https://demo.vercel.events/twitter-card.png",
+  "previewImage": "https://res.cloudinary.com/practicaldev/image/fetch/s--uv4TE1Ag--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5u102ggqoumnnoc977cw.png",
   "datocmsProjectId": "37685",
   "deploymentType": "vercel",
   "buildCommand": "npm run build",
   "datocmsApiTokenEnvName": "DATOCMS_READ_ONLY_API_TOKEN",
-  "livePreviewUrl": "https://demo.vercel.events/"
+  "livePreviewUrl": "https://webmonetization.org/"
 }

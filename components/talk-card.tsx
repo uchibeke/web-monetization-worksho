@@ -18,7 +18,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { parseISO, format, isBefore, isAfter } from 'date-fns';
+import { parseISO, isBefore, isAfter } from 'date-fns';
 import { Talk } from '@lib/types';
 import styles from './talk-card.module.css';
 
@@ -29,8 +29,18 @@ type Props = {
 };
 
 const formatDate = (date: string) => {
-  // https://github.com/date-fns/date-fns/issues/946
-  return format(parseISO(date), "h:mmaaaaa'm'");
+  if (!date) {
+    return "";
+  }
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    timeZone: "America/Los_Angeles",
+    timeZoneName: "short"
+  });
 };
 
 export default function TalkCard({ talk: { title, speaker, start, end }, showTime }: Props) {
